@@ -1,0 +1,88 @@
+/*
+ * Webフォントの読み込み
+ * https://fonts.google.com/specimen/Kiwi+Maru?subset=japanese
+ */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap');
+/* 
+ * <body>タグにスタイルを適用(すべてのコンテンツ)
+ */
+ body {
+    /* 左から優先して見つかったフォントを適用する(Webフォント) */
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+h1,h2,h3 {
+    /* 左から優先して見つかったフォントを適用する(游ゴシック) */
+    font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", sans-serif;
+}
+/* 
+ * <h2>タグにスタイルを適用
+ */
+ h2 {
+    /* 線を描画 (solid:1本線, #1e366a: 16進数カラーコード, 1px: 文字の太さ */
+    border-bottom: solid #1e366a 1px; 
+}
+/* 
+ * 問題文の余白
+ */
+ul li, ol li{
+    /* 要素の内側（境界線からコンテンツ本体の間)の領域。2つ指定しているときは左から 上下 左右 の順番で値が指定される(※em指定することでブラウザの拡大、縮小で1emが変化する) */
+    padding: 1em;
+    list-style-position: inside;
+}
+/* 
+ * class="answers"が指定されているタグの部分にスタイルを適用
+ * ※classは複数の要素に指定することができる(class="answers"は複数のタグに指定できる)
+ */
+ ol.answers {
+    /* リストの先頭の表示を指定 */
+    list-style: upper-alpha;
+
+    padding: 0 1em;
+}
+/*
+ * リストにマウスをおいたときだけスタイルが変わる
+ */
+ ol.answers li:hover {
+    border: solid #1e366a 0.1em;
+    /* border分マイナス0.1em */
+    padding: 0.9em;
+    background-color: #e5ecfc;
+    /* マウスのポインタを変化させる */
+    cursor: pointer;
+}
+/* 
+ * id="main"が指定されているタグの部分にスタイルを適用
+ * ※idは複数の要素に指定することはできない(id="main"が指定されているのは一つのHTMLで一つのみ)
+ * ※要素名は省略できるがdiv#mainと書くこともできる
+ */
+#main {
+    padding: 0 1.5em;
+}
+div.section{
+    margin-top: 2em;
+}
+/**
+ * <span>タグのid=correct-answerが指定されているところだけスタイルを適用する
+ */
+ span#correct-answer {
+    /* 文字の太さを指定 */
+    font-weight: bold;
+
+    /* 文字の色を変更 */
+    color: #f05959;
+}
+/*
+ * class="section"が指定されているタグの部分にスタイルを適用
+ * ※classは複数の要素に指定することができる
+ * ※要素名は省略して.sectionと書くこともできる
+ * (その場合、class指定されている要素すべてにスタイルが適用される)
+ */
+ div.section {
+    /* 上の余白を指定 */
+    margin-top: 2em;
+}
+
+div#section-correct-answer {
+    /** 表示しない */
+    display: none;
+}
