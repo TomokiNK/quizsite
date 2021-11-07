@@ -1,2 +1,2 @@
 # quizsite
-#HTML, CSS, Javascript Practice Sample 
+#HTML, CSS, Javascript Practice Samplesite
