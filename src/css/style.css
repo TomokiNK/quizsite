@@ -67,9 +67,6 @@ div.section{
  span#correct-answer {
     /* 文字の太さを指定 */
     font-weight: bold;
-
-    /* 文字の色を変更 */
-    color: #f05959;
 }
 /*
  * class="section"が指定されているタグの部分にスタイルを適用

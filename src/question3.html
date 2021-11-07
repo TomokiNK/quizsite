@@ -12,6 +12,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--cssの呼び出し-->
 <link rel="stylesheet" href="css/style.css">
+<!--javascriptの呼び出し-->
+<script src="js/questions.js" defer></script>
 <!--ウィンドウタイトル-->
 <title>問題3 | Quiz</title>
 </head>
@@ -30,11 +32,11 @@
             <!--選択肢タイトル-->
             <h3>選択肢</h3>
             <!--選択肢-->
-            <ol class="answers"> 
-                <li>和歌山県</li>
-                <li>奈良県</li>
-                <li>兵庫県</li>
-                <li>岐阜県</li>
+            <ol class="answers" data-id='question3'> 
+                <li data-answer="A">和歌山県</li>
+                <li data-answer="B">奈良県</li>
+                <li data-answer="C">兵庫県</li>
+                <li data-answer="D">岐阜県</li>
             </ol>
         </div>
         <div id="section-correct-answer" class="section">
